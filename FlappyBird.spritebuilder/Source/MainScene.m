@@ -156,7 +156,7 @@
     obstacle.position = worldPosition;
     [obstacle setupRandomPosition];
     obstacle.zOrder = DrawingOrderPipes;
-    //[physicsNode addChild:obstacle];
+    [physicsNode addChild:obstacle];
     //[_obstacles addObject:obstacle];
 }
 

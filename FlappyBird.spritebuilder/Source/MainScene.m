@@ -107,7 +107,7 @@
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     if (!_gameOver) {
-        [character.physicsBody applyAngularImpulse:1000.f];
+        [character.physicsBody applyAngularImpulse:10000.f];
         _sinceTouch = 0.f;
         
         @try
@@ -156,8 +156,8 @@
     obstacle.position = worldPosition;
     [obstacle setupRandomPosition];
     obstacle.zOrder = DrawingOrderPipes;
-    [physicsNode addChild:obstacle];
-    [_obstacles addObject:obstacle];
+    //[physicsNode addChild:obstacle];
+    //[_obstacles addObject:obstacle];
 }
 
 #pragma mark - Update
@@ -207,7 +207,7 @@
             if (!offScreenObstacles) {
                 offScreenObstacles = [NSMutableArray array];
             }
-            [offScreenObstacles addObject:obstacle];
+            //[offScreenObstacles addObject:obstacle];
         }
     }
     
